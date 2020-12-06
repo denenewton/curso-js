@@ -5,9 +5,16 @@ module.exports = {
     'users',
     [
       {
-        nome: 'admin',
-        email: 'admin@email.com',
-        password_hash: await bcryptjs.hash('123456', 8),
+        nome: 'Debora dos Santos Araujo',
+        email: 'debora@email.com',
+        password_hash: await bcryptjs.hash('tigre225', 8),
+        created_at: new Date(),
+        updated_at: new Date(),
+      },
+      {
+        nome: 'Andreia Tamires de Souza',
+        email: 'andreia@hotmail.com',
+        password_hash: await bcryptjs.hash('tigre225', 8),
         created_at: new Date(),
         updated_at: new Date(),
       },

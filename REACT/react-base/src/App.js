@@ -13,16 +13,14 @@ import Routes from './routes';
 function App() {
   return (
     <Provider store={store}>
-      
-        <Router history={history}>
-          <Header />
-          <Routes />
-          <GlobalStyle />
-          <ToastContainer autoClose={3000} className="toast-container" />
-        </Router>
-     
-   </Provider>
-  );  
+      <Router history={history}>
+        <Header />
+        <Routes />
+        <GlobalStyle />
+        <ToastContainer autoClose={3000} className="toast-container" />
+      </Router>
+    </Provider>
+  );
 }
 
 export default App;
