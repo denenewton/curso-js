@@ -8,7 +8,7 @@ export default function Login() {
 
   function handleClick(e) {
     e.preventDefault()
-    dispatch(action.botaoClicado())
+    dispatch(action.botaoClicadoRequest())
   }
 
   return (
