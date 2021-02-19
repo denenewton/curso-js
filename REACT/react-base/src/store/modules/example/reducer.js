@@ -1,30 +1,27 @@
-import * as types from '../types';
+import * as type from '../types';
+import { toast } from 'react-toastify';
 
 const initialState = {
   botaoClicado: false,
-};
-
-export default function(state = initialState, action) {
+}
+// O reducer tem 3 acoes basicas para ouvir um success, request e uma Failure.
+export default function reducer(state = initialState, action) {
+  const newState = { ...state }
   switch (action.type) {
-    case types.BOTAO_CLICADO_SUCCESS: {
-      console.log('Sucesso');
-      const newState = { ...state };
+
+    case type.BOTAO_CLICADO_SUCCESS:
       newState.botaoClicado = !newState.botaoClicado;
       return newState;
-    }
 
-    case types.BOTAO_CLICADO_FAILURE: {
-      console.log('Deu erro =(');
-      return state;
-    }
+    case type.BOTAO_CLICADO_REQUEST:
+      console.log('Estou requisitando...');
+      return newState;
 
-    case types.BOTAO_CLICADO_REQUEST: {
-      console.log('Estou fazendo a requisição');
-      return state;
-    }
+    case type.BOTAO_CLICADO_FAILURE:
+      toast.error('Falha na requisisão!')
+      return newState;
 
-    default: {
-      return state;
-    }
+    default:
+      return newState;
   }
 }

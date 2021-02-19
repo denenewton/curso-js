@@ -19,7 +19,7 @@ export default function Header() {
       <Link to="/asdasd">
         <FaSignInAlt size={24} />
       </Link>
-      {botaoClicado ? 'Clicado' : 'Não clicado'}
+     { botaoClicado ? 'Clicado' : 'Não clicado'}
     </Nav>
   );
 }

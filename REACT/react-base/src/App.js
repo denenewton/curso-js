@@ -14,12 +14,12 @@ function App() {
   return (
     <Provider store={store}>
       <PersistGate persistor={persistor}>
-        <Router history={history}>
-          <Header />
-          <Routes />
-          <GlobalStyle />
-          <ToastContainer autoClose={3000} className="toast-container" />
-        </Router>
+      <Router history={history}>
+        <Header />
+        <Routes />
+        <GlobalStyle />
+        <ToastContainer autoClose={3000} className="toast-container" />
+      </Router>
       </PersistGate>
     </Provider>
   );
